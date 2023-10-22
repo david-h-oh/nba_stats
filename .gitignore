@@ -1,6 +1,7 @@
 # Directory
 data/
 stats/
+fantasy/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
