@@ -28,3 +28,7 @@ python -m pip install -e .[dev]
 ### Notes
 - The notebooks use `numpy`, `pandas`, `scikit-learn`, `nba-api`, `ipykernel`, and `jupyter`.
 - The `dev` extras include `black`, `isort`, `flake8`, `pre-commit`, `pytest`, and `ipython`.
+
+## Preparing model data
+
+Run `python data_retrieve/build_player_season_dataset.py` after updating the regular-season game logs. It writes leakage-safe player-season features and their following-season outcomes to `data/model/`. A feature row for season *t* contains only season-*t* games; its matching label is the player's realized season-*t + 1* production.
