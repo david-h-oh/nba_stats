@@ -1,10 +1,30 @@
-# nba_stats
+﻿# nba_stats
 ### A repo that retrieves relevant NBA stats using `nba_api`
 
 ## Setup
-### Setting up the environment
-Create a conda environment by using the following command in an Anaconda Prompt:
+### Runtime environment
+This project is configured to run the notebooks with the runtime dependencies declared in `pyproject.toml`.
 
-`conda env create -f environment.yml`
+Recommended install using pip:
 
-*Note*: `environment.yml` was created using `conda env export -n <environment name> > environment.yml`
+```bash
+python -m pip install -U pip setuptools wheel
+python -m pip install -e .
+```
+
+If you prefer conda, you can still create the environment from `environment.yml`:
+
+```bash
+conda env create -f environment.yml
+```
+
+### Development dependencies
+To install development tools for formatting, linting, and testing:
+
+```bash
+python -m pip install -e .[dev]
+```
+
+### Notes
+- The notebooks use `numpy`, `pandas`, `scikit-learn`, `nba-api`, `ipykernel`, and `jupyter`.
+- The `dev` extras include `black`, `isort`, `flake8`, `pre-commit`, `pytest`, and `ipython`.
